@@ -1,0 +1,1046 @@
+.fullbox {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/home/bfe597e3ef0fe641cf827efc9e3be23c.jpeg') lightgray 50% / cover no-repeat;
+  padding: 2%
+}
+
+.container {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: var(--Space-16px, 16px);
+  background: #FFF;
+  width: 80%;
+}
+
+.left-side {
+  /* opacity: 0px; */
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-16px, 16px);
+
+}
+
+.pro-img img {
+  width: 226px;
+  height: 226px;
+  border-radius: 159.5px;
+  border: 4.5px solid var(--Button-main-d, #5A2006);
+  background: var(--Avatar-Male-Jackson, lightgray 50% / cover no-repeat);
+  margin: 10px;
+}
+
+.submit-btn {
+  height: 48px;
+  padding: 13px 24px;
+  display: flex;
+  /* padding: 15px 30px; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  border-radius: var(--Space-16px, 16px);
+  background: var(--Button-main-d, #5A2006);
+  border: none;
+
+  color: var(--Button-FontColor-active, #FFF);
+  text-align: center;
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 33.6px */
+  letter-spacing: 0.07px;
+}
+
+.submit-btn2 {
+  display: none;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.info-body {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.info-text {
+  flex: 1 0 0;
+  color: var(--BG-Black, #000);
+
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: 0.12px;
+}
+
+.any {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.texts {
+  align-self: stretch;
+  color: var(--Button-FontColor-disabled, #797979);
+
+  /* Body/Medium */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.14px;
+}
+
+.switches {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.form-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.form-check-label {
+  flex: 1 0 0;
+  color: var(--BG-Black, #000);
+
+  /* Body/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.07px;
+}
+
+input[type=checkbox] {
+  background-color: #E0E0E0;
+}
+
+input[type=checkbox]:checked {
+  background-color: #C17A46;
+}
+
+.many-stats {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--Button-main-d, #5A2006);
+}
+
+.stats {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.statsText {
+  flex: 1 0 0;
+  color: var(--BG-White, #FFF);
+
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: 0.12px;
+}
+
+.statsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.Info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.parghraph {
+  color: var(--BG-White, #FFF);
+
+  /* Body/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.07px;
+}
+
+.values {
+  flex: 1 0 0;
+  color: rgba(255, 255, 255, 0.60);
+
+  /* Body/Medium */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.14px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-16px, 16px);
+  flex: 1 0 0;
+}
+
+.lastData {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.dataOfdata {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.pragh {
+  align-self: stretch;
+  color: var(--BG-Black, #000);
+
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: 0.12px;
+}
+
+.extraData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.extra {
+  color: var(--BG-Black, #000);
+
+  /* Body/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.07px;
+}
+
+#diff {
+  color: var(--BG-Black, #000);
+
+  /* Body/Regular */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.14px;
+}
+
+.readList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.aboutList {
+  display: flex;
+  height: 34px;
+  max-width: 1184px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+#readList {
+  color: var(--BG-Black, #000);
+
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: 0.12px;
+
+}
+
+.bodyOflist {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-16px, 16px);
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #FFF;
+}
+
+#img {
+  height: 161px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: url('/profile/book.png') lightgray 50% / cover no-repeat;
+}
+
+.bodyOfcard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.group {
+  width: 117px;
+  height: 36px;
+}
+
+#nameOfbook {
+  color: var(--BG-Black, #000);
+
+  /* Small/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 16.5px */
+  letter-spacing: 0.055px;
+}
+
+#Author {
+  color: #252829;
+
+  /* Small/Regular */
+  font-family: "Bricolage Grotesque";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 16.5px */
+  letter-spacing: 0.055px;
+}
+
+/* Tablet style ........................................................................................ */
+
+@media screen and (max-width: 1130px) and (min-width: 720px) {
+  .fullbox {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/home/bfe597e3ef0fe641cf827efc9e3be23c.jpeg') lightgray 50% / cover no-repeat;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .container {
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    overflow: auto;
+        background: #FFF;
+  }
+
+  .left-side {
+    /* opacity: 0px; */
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--Space-16px, 16px);
+
+  }
+
+  .pro-img img {
+    width: 226px;
+    height: 226px;
+    border-radius: 159.5px;
+    border: 4.5px solid var(--Button-main-d, #5A2006);
+    background: var(--Avatar-Male-Jackson, lightgray 50% / cover no-repeat);
+    margin: 10px;
+  }
+
+  .submit-btn {
+    height: 48px;
+    padding: 13px 24px;
+    display: flex;
+    /* padding: 15px 30px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: var(--Space-16px, 16px);
+    background: var(--Button-main-d, #5A2006);
+    border: none;
+
+    color: var(--Button-FontColor-active, #FFF);
+    text-align: center;
+    /* Body Large/Bold */
+    font-family: "Bricolage Grotesque";
+
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 33.6px */
+    letter-spacing: 0.07px;
+  }
+
+  .submit-btn2 {
+    display: none;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .info-body {
+    display: flex;
+    height: 34px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .info-text {
+    flex: 1 0 0;
+    color: var(--BG-Black, #000);
+
+    /* Body Large/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 33.6px */
+    letter-spacing: 0.12px;
+  }
+
+  .any {
+    width: 24px;
+    height: 24px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+  }
+
+  .texts {
+    align-self: stretch;
+    color: var(--Button-FontColor-disabled, #797979);
+
+    /* Body/Medium */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.14px;
+  }
+
+  .switches {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .form-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .form-check-label {
+    flex: 1 0 0;
+    color: var(--BG-Black, #000);
+
+    /* Body/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.07px;
+  }
+
+  input[type=checkbox] {
+    background-color: #E0E0E0;
+  }
+
+  input[type=checkbox]:checked {
+    background-color: #C17A46;
+  }
+
+  .many-stats {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--Button-main-d, #5A2006);
+  }
+
+  .stats {
+    display: flex;
+    height: 34px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .statsText {
+    flex: 1 0 0;
+    color: var(--BG-White, #FFF);
+
+    /* Body Large/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 33.6px */
+    letter-spacing: 0.12px;
+  }
+
+  .statsInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+  }
+
+  .Info {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .parghraph {
+    color: var(--BG-White, #FFF);
+
+    /* Body/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.07px;
+  }
+
+  .values {
+    flex: 1 0 0;
+    color: rgba(255, 255, 255, 0.60);
+
+    /* Body/Medium */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.14px;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Space-16px, 16px);
+    flex: 1 0 0;
+  }
+
+  .lastData {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .dataOfdata {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+
+  .pragh {
+    align-self: stretch;
+    color: var(--BG-Black, #000);
+
+    /* Body Large/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 33.6px */
+    letter-spacing: 0.12px;
+  }
+
+  .extraData {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+  }
+
+  .extra {
+    color: var(--BG-Black, #000);
+
+    /* Body/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.07px;
+  }
+
+  #diff {
+    color: var(--BG-Black, #000);
+
+    /* Body/Regular */
+    font-family: "Bricolage Grotesque";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.14px;
+  }
+
+  .readList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .aboutList {
+    display: flex;
+    height: 34px;
+    max-width: 1184px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  #readList {
+    color: var(--BG-Black, #000);
+
+    /* Body Large/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 33.6px */
+    letter-spacing: 0.12px;
+
+  }
+
+  .bodyOflist {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--Space-16px, 16px);
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #FFF;
+  }
+
+  #img {
+    height: 161px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: url('/profile/book.png') lightgray 50% / cover no-repeat;
+  }
+
+  .bodyOfcard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .group {
+    width: 117px;
+    height: 36px;
+  }
+
+  #nameOfbook {
+    color: var(--BG-Black, #000);
+
+    /* Small/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 16.5px */
+    letter-spacing: 0.055px;
+  }
+
+  #Author {
+    color: #252829;
+
+    /* Small/Regular */
+    font-family: "Bricolage Grotesque";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 16.5px */
+    letter-spacing: 0.055px;
+  }
+}
+
+/* Mobile style ........................................................................................ */
+
+@media screen and (max-width: 719px) and (min-width: 320px) {
+  .fullbox {
+    display: flex;
+    min-width: 360px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    background: url('/home/bfe597e3ef0fe641cf827efc9e3be23c.jpeg') lightgray 50% / cover no-repeat;
+  }
+
+  .container {
+    display: flex;
+    min-width: 360px;
+    max-width: 720px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #FFF;
+    overflow: auto;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .submit-btn2 {
+    display: flex;
+    padding: 13px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: 16px;
+    background: var(--Button-main-d, #5A2006);
+    border: none;
+
+    color: var(--Button-FontColor-active, #FFF);
+    text-align: center;
+
+    /* Body/Bold */
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 22.4px */
+    letter-spacing: 0.07px;
+
+  }
+
+  .submit-btn {
+    display: none;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .switches {
+    display: none;
+  }
+
+  .lastData {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  .dataOfdata {
+    display: flex;
+    min-width: 278px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+  }
+
+  .pragh {
+    align-self: stretch;
+    color: var(--BG-Black, #000);
+
+    /* Body Medium/Bold */
+    font-family: "Bricolage Grotesque";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    /* 27.2px */
+    letter-spacing: 0.085px;
+  }
+
+  .extraData {
+    gap: 2px;
+  }
+
+  .extra {
+    /* Caption/Bold */
+    font-size: 12px;
+    line-height: 150%;
+    /* 18px */
+    letter-spacing: 0.06px;
+  }
+
+  #diff {
+    /* Caption/Regular */
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.06px;
+  }
+  .readList{
+    flex-wrap: wrap;
+  }
+}
+
+/* General buttons' styling ..................................................................... */
+
+button:hover {
+  display: inline-flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: var(--Space-16px, 16px);
+  background: var(--Button-main-h, #C17A46);
+}
+
+button:active {
+  display: inline-flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: var(--Space-16px, 16px);
+  background: var(--Button-main-p, #491302);
+}
+
+/* lhjjjjjjjjjjjjj */
+/* .header_section_3 {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+
+} */
+
+/*.header_section_3 h4 {
+  color: var(--BG-Black, #000);
+  /* H4/Bold */
+  /*font-family: "Bricolage Grotesque";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  margin: 0;
+  margin-right: 47rem;
+}*/
+
+/*.header_section_3 a {
+  color: var(--BG-Black, #000);
+  /* Body Large/Medium */
+  /*font-family: "Bricolage Grotesque";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 33.6px */
+  /*letter-spacing: 0.12px;
+  text-decoration-line: underline;
+  
+}*/
+/* 
+.section_3 {
+  display: flex;
+  
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.section_3_body {
+  border: 1px solid black;
+  width: 24%;
+
+}
+
+.section_3_body_img {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.section_3_body_img img {
+  width: 180px;
+
+}
+
+
+
+.section_3_body_information {
+  padding-left: 10px;
+}
+
+.section_3_body_information h4 {
+  margin-bottom: 5px;
+}
+
+.section_3_body_information p {
+  margin: 5px;
+}
+
+.section_3_body_img img{
+  width: 80%;
+}
+
+.section_3_body_information {
+  padding-bottom: 5%;
+} */

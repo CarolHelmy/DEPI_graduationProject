@@ -1,0 +1,188 @@
+/* General Navbar Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background: #FFF;
+  color: #5A2006;
+}
+
+body {
+  font-family: "Bricolage Grotesque";
+
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar-links ul li a {
+  color: #5A2006;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar-links ul li :hover {
+  color: #C17A46;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  border-radius: 8px;
+  border: 1.5px solid var(--Button-main-d, #5A2006);
+  background: #5A2006;
+  display: flex;
+  padding: 7px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  margin-left: 20px;
+  margin: 5px;
+}
+
+.register-btn {
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1.5px solid #5A2006;
+  background: #FFF;
+  display: flex;
+  padding: 7px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: #5A2006;
+  margin: 5px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  gap: 5px;
+  cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+
+  .navbar-links,
+  .navbar-buttons {
+    display: none;
+  }
+
+  .navbar-links.active,
+  .navbar-buttons.active {
+    /* text-align: center; */
+    background-color: white;
+    width: 100%;
+    color: #5A2006;
+    display: block;
+
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  ul li {
+    border-bottom: 1px solid #C17A46;
+    padding-bottom: 5px;
+  }
+
+  .navbar-buttons {
+    gap: 10px;
+    padding: 10px;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .navbar-buttons button {
+    display: inline;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .login-btn {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .menu {
+    margin: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1.5px solid var(--Button-main-d, #5A2006);
+  background: var(--Avatar-Male-Jackson, lightgray 50% / cover no-repeat);
+}
+
+#icon p {
+  margin: 10px;
+  color: var(--Button-main-d, #5A2006);
+
+  /* Small/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 16.5px */
+  letter-spacing: 0.055px;
+}
+
+@media(max-width:1200px) {
+  .navbar {
+    min-width: 768px;
+    max-width: 1200px;
+  }
+}
+
+@media(max-width:768px) {
+  .navbar {
+    height: 60px;
+    min-width: 360px;
+    max-width: 768px;
+  }
+}

@@ -1,0 +1,124 @@
+<app-navbar></app-navbar>
+<div class="frame">
+  <div class="searchPage">
+    <div class="container">
+      <!-- search bar -->
+      <div class="search-bar">
+        <div class="search-input">
+          <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.0001 14L11.1001 11.1" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input type="text" [(ngModel)]="searchText" (input)="searchBooks()" placeholder="Search for books">
+        </div>
+        <button class="search-btn">
+          Search
+          <svg class="btn-ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="content">
+        <aside class="sidebar">
+          <!-- Category -->
+          <div class="category">
+            <div class="category-header">
+              <h3>Category</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M6 9.5L12 15.5L18 9.5" stroke="#5A2006" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="category-content">
+              <ul>
+                <li *ngFor="let category of categories">
+                  <label>
+                    <input type="checkbox" [checked]="selectedCategories.has(category)" (change)="toggleCategory(category)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {{ category }}
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Size -->
+          <div class="size">
+            <div class="size-header">
+              <h3>Size</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M6 9.5L12 15.5L18 9.5" stroke="#5A2006" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="size-content">
+              <ul>
+                <li *ngFor="let size of sizes">
+                  <label>
+                    <input type="checkbox" [checked]="selectedSizes.has(size)" (change)="toggleSize(size)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {{ size }} Pages
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Rating -->
+          <div class="rating">
+            <div class="rating-header">
+              <h3>Rating</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M6 9.5L12 15.5L18 9.5" stroke="#5A2006" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="rating-content">
+              <ul>
+                <li *ngFor="let rating of ratings">
+                  <label>
+                    <input type="checkbox" [checked]="selectedRatings.has(rating)" (change)="toggleRating(rating)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="stars">
+                      <svg *ngFor="let star of [1,2,3,4,5]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path [attr.d]="star <= rating ? 'M9.1519 2.29616L10.3251 4.66196C10.4851 4.99129 10.9117 5.30717 11.2717 5.36766L13.3981 5.72387C14.758 5.95239 15.078 6.94711 14.098 7.92837L12.4449 9.59517C12.1649 9.87744 12.0116 10.4218 12.0982 10.8117L12.5716 12.875C12.9448 14.5082 12.0849 15.14 10.6518 14.2864L8.65863 13.0968C8.2987 12.8818 7.70543 12.8818 7.33876 13.0968L5.34567 14.2864C3.91916 15.14 3.0526 14.5015 3.42589 12.875L3.89917 10.8117C3.98582 10.4218 3.83251 9.87744 3.55254 9.59517L1.89939 7.92837C0.926162 6.94711 1.23946 5.95239 2.59931 5.72387L4.72574 5.36766C5.07904 5.30717 5.50566 4.99129 5.66564 4.66196L6.83883 2.29616C7.47876 1.01245 8.51863 1.01245 9.1519 2.29616Z' : ''"
+                          fill="#5A2006" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="books-content">
+          <div class="card" *ngFor="let book of filteredBooks">
+            <img [src]="book.image" [alt]="book.title">
+            <div class="book-info">
+              <div class="text">
+                <p class="title">{{ book.title }}</p>
+                <p class="auther">{{ book.author }}</p>
+              </div>
+              <div class="book-rate">
+                <svg *ngFor="let star of [1,2,3,4,5]" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path [attr.d]="star <= book.rating ?
+                    'M8.0076 2.00906L9.03415 4.07914C9.17415 4.3673 9.54743 4.6437 9.86243 4.69663L11.723 5.00831C12.9129 5.20827 13.1929 6.07864 12.3355 6.93725L10.889 8.3957C10.644 8.64268 10.5099 9.11903 10.5856 9.46017L10.9998 11.2656C11.3264 12.6946 10.574 13.2475 9.31999 12.5006L7.57599 11.4597C7.26105 11.2715 6.74194 11.2715 6.42111 11.4597L4.67716 12.5006C3.42896 13.2475 2.67072 12.6887 2.99735 11.2656L3.41147 9.46017C3.48729 9.11903 3.35314 8.64268 3.10816 8.3957L1.66166 6.93725C0.810087 6.07864 1.08422 5.20827 2.27409 5.00831L4.13472 4.69663C4.44385 4.6437 4.81714 4.3673 4.95713 4.07914L5.98367 2.00906C6.54361 0.885814 7.4535 0.885814 8.0076 2.00906Z' :
+                    ''"
+                  fill="#5A2006" stroke="#5A2006" stroke-width="1.3125" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

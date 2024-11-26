@@ -1,0 +1,168 @@
+<app-navbar></app-navbar>
+<div class="all">
+<div class="cntr">
+
+    <div class="booking">
+      <img [src]="currentBook?.coverImageUrl" class="bookCover"
+        alt="thus_spoke_zarathustra_hd">
+      <button type="button" class="bookButton" (click)="addReservation()">Book your turn</button>
+      <button type="button" class="requestButton" (click)="downloadPDF()">Request pdf summary
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-lock"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
+        </svg>
+      </button>
+
+      <div class="stars">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="starEmpty">
+  <path d="M18.3033 4.59232L20.6497 9.32392C20.9697 9.98257 21.8229 10.6143 22.5429 10.7353L26.7957 11.4477C29.5154 11.9048 30.1554 13.8942 28.1956 15.8567L24.8893 19.1903C24.3293 19.7549 24.0228 20.8437 24.196 21.6234L25.1426 25.7501C25.8892 29.0165 24.1693 30.2801 21.303 28.5729L17.3168 26.1937C16.5969 25.7635 15.4104 25.7635 14.677 26.1937L10.6909 28.5729C7.83784 30.2801 6.1047 29.003 6.85129 25.7501L7.79785 21.6234C7.97116 20.8437 7.66453 19.7549 7.10458 19.1903L3.79829 15.8567C1.85184 13.8942 2.47844 11.9048 5.19813 11.4477L9.451 10.7353C10.1576 10.6143 11.0108 9.98257 11.3308 9.32392L13.6772 4.59232C14.957 2.02489 17.0368 2.02489 18.3033 4.59232Z" fill="#C17A46" stroke="#C17A46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="starEmpty">
+  <path d="M18.3033 4.59232L20.6497 9.32392C20.9697 9.98257 21.8229 10.6143 22.5429 10.7353L26.7957 11.4477C29.5154 11.9048 30.1554 13.8942 28.1956 15.8567L24.8893 19.1903C24.3293 19.7549 24.0228 20.8437 24.196 21.6234L25.1426 25.7501C25.8892 29.0165 24.1693 30.2801 21.303 28.5729L17.3168 26.1937C16.5969 25.7635 15.4104 25.7635 14.677 26.1937L10.6909 28.5729C7.83784 30.2801 6.1047 29.003 6.85129 25.7501L7.79785 21.6234C7.97116 20.8437 7.66453 19.7549 7.10458 19.1903L3.79829 15.8567C1.85184 13.8942 2.47844 11.9048 5.19813 11.4477L9.451 10.7353C10.1576 10.6143 11.0108 9.98257 11.3308 9.32392L13.6772 4.59232C14.957 2.02489 17.0368 2.02489 18.3033 4.59232Z" fill="#C17A46" stroke="#C17A46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="starEmpty">
+  <path d="M18.3033 4.59232L20.6497 9.32392C20.9697 9.98257 21.8229 10.6143 22.5429 10.7353L26.7957 11.4477C29.5154 11.9048 30.1554 13.8942 28.1956 15.8567L24.8893 19.1903C24.3293 19.7549 24.0228 20.8437 24.196 21.6234L25.1426 25.7501C25.8892 29.0165 24.1693 30.2801 21.303 28.5729L17.3168 26.1937C16.5969 25.7635 15.4104 25.7635 14.677 26.1937L10.6909 28.5729C7.83784 30.2801 6.1047 29.003 6.85129 25.7501L7.79785 21.6234C7.97116 20.8437 7.66453 19.7549 7.10458 19.1903L3.79829 15.8567C1.85184 13.8942 2.47844 11.9048 5.19813 11.4477L9.451 10.7353C10.1576 10.6143 11.0108 9.98257 11.3308 9.32392L13.6772 4.59232C14.957 2.02489 17.0368 2.02489 18.3033 4.59232Z" fill="#C17A46" stroke="#C17A46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="starEmpty">
+  <path d="M18.3033 4.59232L20.6497 9.32392C20.9697 9.98257 21.8229 10.6143 22.5429 10.7353L26.7957 11.4477C29.5154 11.9048 30.1554 13.8942 28.1956 15.8567L24.8893 19.1903C24.3293 19.7549 24.0228 20.8437 24.196 21.6234L25.1426 25.7501C25.8892 29.0165 24.1693 30.2801 21.303 28.5729L17.3168 26.1937C16.5969 25.7635 15.4104 25.7635 14.677 26.1937L10.6909 28.5729C7.83784 30.2801 6.1047 29.003 6.85129 25.7501L7.79785 21.6234C7.97116 20.8437 7.66453 19.7549 7.10458 19.1903L3.79829 15.8567C1.85184 13.8942 2.47844 11.9048 5.19813 11.4477L9.451 10.7353C10.1576 10.6143 11.0108 9.98257 11.3308 9.32392L13.6772 4.59232C14.957 2.02489 17.0368 2.02489 18.3033 4.59232Z" fill="#C17A46" stroke="#C17A46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="starEmpty">
+  <path d="M18.3033 4.59232L20.6497 9.32392C20.9697 9.98257 21.8229 10.6143 22.5429 10.7353L26.7957 11.4477C29.5154 11.9048 30.1554 13.8942 28.1956 15.8567L24.8893 19.1903C24.3293 19.7549 24.0228 20.8437 24.196 21.6234L25.1426 25.7501C25.8892 29.0165 24.1693 30.2801 21.303 28.5729L17.3168 26.1937C16.5969 25.7635 15.4104 25.7635 14.677 26.1937L10.6909 28.5729C7.83784 30.2801 6.1047 29.003 6.85129 25.7501L7.79785 21.6234C7.97116 20.8437 7.66453 19.7549 7.10458 19.1903L3.79829 15.8567C1.85184 13.8942 2.47844 11.9048 5.19813 11.4477L9.451 10.7353C10.1576 10.6143 11.0108 9.98257 11.3308 9.32392L13.6772 4.59232C14.957 2.02489 17.0368 2.02489 18.3033 4.59232Z" fill="#C17A46" stroke="#C17A46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      </div>
+
+      <div class="waiting">
+      <h5>people on waiting list</h5>
+      <h3>{{noReservers}}</h3>
+    </div>
+    </div>
+
+
+    <div class="rit">
+
+      <div class="bookHead align-content-center ">
+        <div class="inHead p-2 d-flex align-items-center justify-content-between">
+          
+          <div class="bookTitle">
+            <h2>{{currentBook?.bookName}}</h2>
+          </div>
+
+          <div class="bookmarkicn" (click) ="fill()">
+            <svg *ngIf="saved == true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M6.6665 29.968V16.1793C6.6665 10.1236 6.6665 7.09584 8.61912 5.21461C10.5718 3.33337 13.7144 3.33337 19.9998 3.33337C26.2852 3.33337 29.428 3.33337 31.3805 5.21461C33.3332 7.09584 33.3332 10.1236 33.3332 16.1793V29.968C33.3332 33.8112 33.3332 35.7327 32.0452 36.4205C29.5507 37.7524 24.8718 33.3087 22.6498 31.9707C21.3612 31.1947 20.7168 30.8067 19.9998 30.8067C19.2828 30.8067 18.6385 31.1947 17.3498 31.9707C15.1278 33.3087 10.449 37.7524 7.95459 36.4205C6.6665 35.7327 6.6665 33.8112 6.6665 29.968Z" stroke="#5A2006" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg *ngIf="saved == false" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+              <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+            </svg>
+          </div>
+
+        </div>
+
+        <div class="author px-2">
+          <h4 class="text-secondary">{{currentBook?.bookAuthor}}</h4>
+        </div>
+      </div>
+
+      <div class="category">
+        <h5>Category: </h5>
+          <!-- Loop over the categories of the displayed book -->
+          <div *ngFor="let category of currentBook?.categories" class="cats">
+            {{ category }}
+          </div>
+      </div>
+
+      <div class="rating d-flex mt-0">
+        <div class="ratingStars d-flex mx-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill mx-1"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill mx-1"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill mx-1"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill mx-1"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill mx-1"
+            viewBox="0 0 16 16">
+            <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+        </div>
+        <div class="fw-medium">
+          <h6>5.0  .  1 Rating  .  0 Want to read  .  0 Currently reading  .  1 Read</h6>
+        </div>
+      </div>
+
+      <div class="boodData">
+        <div class="publishDate">
+          <h6>Publish Date</h6>
+          <h6>{{currentBook?.publishDate}}</h6>
+        </div>
+        <div class="publishDate">
+          <h6>Publisher</h6>
+          <h6>{{currentBook?.publisher}}</h6>
+        </div>
+        <div class="publishDate">
+          <h6>Language</h6>
+          <h6>{{currentBook?.language}}</h6>
+        </div>
+        <div class="publishDate">
+          <h6>Pages</h6>
+          <h6>{{currentBook?.numOfPages}}</h6>
+        </div>
+      </div>
+
+      <div class="bout m-3">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione labore aspernatur atque excepturi voluptatibus fuga enim? Iusto, obcaecati amet repellendus tempore beatae, dolorem repellat fugit sapiente illum sint consectetur velit.
+         doloremque rem expedita commodi veniam. Libero inventore aliquam ex nemo molestiae, laudantium cum! At ipsam nulla perferendis veritatis facilis?</p>
+      </div>
+
+
+      <div class="reviews">
+        <h2>Reviews</h2>
+        <div class="addreviews">
+          
+          <input type="text" name="review" [(ngModel)]="userComment" placeholder="Write your review" class="bg-tertiary rounded p-2 w-75">
+          <button class="addComment" (click)="addComment()">Submit Comment</button>
+        </div>
+        
+        <div class="peopleReviews row mt-2 d-flex w-100" *ngFor="let review of reviews">
+          <div class="profilePic col-2">
+            <img [src]="review.profilePictureUrl" alt="profilePic" class="rounded-circle w-100">
+          </div>
+          <div class="theReview col-9 m-0 p-0">
+            <h5 class="text-black fw-bold">{{ review.userName }}</h5>
+            <p class="text-black fw-lighter">{{ review.comment }}</p>
+        
+            <div class="ratieStars d-flex mx-2">
+              <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+                <svg *ngIf="i < review.rating" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+              </ng-container>
+              <h6 class="text-black mx-2">{{ review.rating }}.0</h6>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

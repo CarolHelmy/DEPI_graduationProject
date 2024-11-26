@@ -1,0 +1,114 @@
+<div class="parent">
+        <div class="top">
+           
+        </div>
+        <div class=" left-side">
+            <div class="main-card">
+                <div class="logo" routerLink="/home">
+                    <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.224243 2.26557H6.55619V25.7925H0.224243V2.26557Z" fill="black"/>
+                        <path d="M6.55619 2.26557H0.224243L6.55619 0.0581055V2.26557Z" fill="black"/>
+                        <path d="M6.55619 25.7925H0.224243L6.55619 28V25.7925Z" fill="black"/>
+                        <path d="M14.8052 22.8299V28L17.0126 22.8299H14.8052Z" fill="black"/>
+                        <path d="M8.76366 28V22.8299L6.55619 28H8.76366Z" fill="black"/>
+                        <path d="M8.76366 28V22.8299H14.8052V28H8.76366Z" fill="black"/>
+                        <path d="M30.7803 2.26557H37.1122V25.7925H30.7803V2.26557Z" fill="black"/>
+                        <path d="M37.1122 2.26557H30.7803L37.1122 0.0581056V2.26557Z" fill="black"/>
+                        <path d="M37.1122 25.7925H30.7803L37.1122 28V25.7925Z" fill="black"/>
+                        <path d="M39.3197 5.22823V0.0581055L37.1122 5.22823H39.3197Z" fill="black"/>
+                        <path d="M39.3197 22.8299V28L37.1122 22.8299H39.3197Z" fill="black"/>
+                        <path d="M39.3197 11.444V16.6141L37.1122 11.444H39.3197Z" fill="black"/>
+                        <path d="M47.5687 5.22823V0.0581055L49.7761 5.22823H47.5687Z" fill="black"/>
+                        <path d="M44.606 11.3859H49.7761L44.606 14V11.3859Z" fill="black"/>
+                        <path d="M44.606 16.6141H49.7761L44.606 14V16.6141Z" fill="black"/>
+                        <path d="M47.5687 22.8299V28L49.7761 22.8299H47.5687Z" fill="black"/>
+                        <path d="M39.3197 16.6722V11.444H44.606V16.6722H39.3197Z" fill="black"/>
+                        <path d="M44.606 5.22823H49.7761V11.3859H44.606V5.22823Z" fill="black"/>
+                        <path d="M44.606 16.6141H49.7761V22.8299H44.606V16.6141Z" fill="black"/>
+                        <path d="M39.3197 5.22823V0.0581055H47.5687V5.22823H39.3197Z" fill="black"/>
+                        <path d="M39.3197 28V22.8299H47.5687V28H39.3197Z" fill="black"/>
+                        <path d="M20.7303 4.87967H27.0623L20.7303 7.08714V4.87967Z" fill="black"/>
+                        <path d="M27.0623 2.20747H20.7303L27.0623 0V2.20747Z" fill="black"/>
+                        <path d="M20.7303 8.77178H27.0623V25.7344H20.7303V8.77178Z" fill="black"/>
+                        <path d="M27.0623 8.77178H20.7303L27.0623 6.56431V8.77178Z" fill="black"/>
+                        <path d="M27.0623 25.7344H20.7303L27.0623 27.9419V25.7344Z" fill="black"/>
+                        <path d="M20.7303 2.20747H27.0623V4.87967H20.7303V2.20747Z" fill="black"/>
+                    </svg>
+                </div>
+
+                <div class="main-frame">
+                    
+                </div>
+                <p class="welcome">Welcome Back</p>
+
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Your Email"  formControlName="email"  required>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Your Password" formControlName="password" required>
+
+                    </div>   
+
+                    <a href="" class="f-pass">Forgot password</a>
+
+                    <button class="submit-btn">Login</button>
+
+                </form>
+
+                <div class="or">-OR-</div>
+
+                <div class="SU-div">
+                    <p class="SU-sentence">Don’t have an account?? <a routerLink="/signUp" class="SU">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class=" right-side">
+           
+        </div>
+    
+        <!-- <div class="footer"> -->
+            <footer>
+            <div class="footer-data">
+                <div class="footer-main-content">
+                    <div class="footerlogo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="16" viewBox="0 0 29 16" fill="none">
+                            <path d="M0 1.29461H3.61826V14.7386H0V1.29461Z" fill="white"/>
+                            <path d="M3.61826 1.29461H0L3.61826 0.0332031V1.29461Z" fill="white"/>
+                            <path d="M3.61826 14.7386H0L3.61826 16V14.7386Z" fill="white"/>
+                            <path d="M8.33195 13.0457V16L9.59336 13.0457H8.33195Z" fill="white"/>
+                            <path d="M4.87967 16V13.0457L3.61826 16H4.87967Z" fill="white"/>
+                            <path d="M4.87967 16V13.0457H8.33195V16H4.87967Z" fill="white"/>
+                            <path d="M17.4606 1.29461H21.0788V14.7386H17.4606V1.29461Z" fill="white"/>
+                            <path d="M21.0788 1.29461H17.4606L21.0788 0.0332032V1.29461Z" fill="white"/>
+                            <path d="M21.0788 14.7386H17.4606L21.0788 16V14.7386Z" fill="white"/>
+                            <path d="M22.3402 2.98756V0.0332031L21.0788 2.98756H22.3402Z" fill="white"/>
+                            <path d="M22.3402 13.0457V16L21.0788 13.0457H22.3402Z" fill="white"/>
+                            <path d="M22.3402 6.53943V9.49378L21.0788 6.53943H22.3402Z" fill="white"/>
+                            <path d="M27.0539 2.98756V0.0332031L28.3153 2.98756H27.0539Z" fill="white"/>
+                            <path d="M25.361 6.50623H28.3153L25.361 8.00001V6.50623Z" fill="white"/>
+                            <path d="M25.361 9.49378H28.3153L25.361 8.00001V9.49378Z" fill="white"/>
+                            <path d="M27.0539 13.0457V16L28.3153 13.0457H27.0539Z" fill="white"/>
+                            <path d="M22.3402 9.52698V6.53943H25.361V9.52698H22.3402Z" fill="white"/>
+                            <path d="M25.361 2.98756H28.3153V6.50623H25.361V2.98756Z" fill="white"/>
+                            <path d="M25.361 9.49378H28.3153V13.0457H25.361V9.49378Z" fill="white"/>
+                            <path d="M22.3402 2.98756V0.0332031H27.0539V2.98756H22.3402Z" fill="white"/>
+                            <path d="M22.3402 16V13.0457H27.0539V16H22.3402Z" fill="white"/>
+                            <path d="M11.7178 2.78838H15.336L11.7178 4.04979V2.78838Z" fill="white"/>
+                            <path d="M15.336 1.26141H11.7178L15.336 0V1.26141Z" fill="white"/>
+                            <path d="M11.7178 5.01245H15.336V14.7054H11.7178V5.01245Z" fill="white"/>
+                            <path d="M15.336 5.01245H11.7178L15.336 3.75104V5.01245Z" fill="white"/>
+                            <path d="M15.336 14.7054H11.7178L15.336 15.9668V14.7054Z" fill="white"/>
+                            <path d="M11.7178 1.26141H15.336V2.78838H11.7178V1.26141Z" fill="white"/>
+                          </svg>
+                    </div>
+                    <div class="copyright">| Copyright © 2024</div>
+                </div>
+            </div>
+        </footer>
+        <!-- </div> -->
+</div>

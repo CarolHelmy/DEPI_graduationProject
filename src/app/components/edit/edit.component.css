@@ -1,0 +1,178 @@
+.fullbox{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/home/bfe597e3ef0fe641cf827efc9e3be23c.jpeg') lightgray 50% / cover no-repeat;
+  padding: 30px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container {
+  display: flex;
+  padding: var(--Space-16px, 16px);
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: var(--Space-16px, 16px);
+  background: #FFF;
+  width: 70%;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-16px, 16px);
+  align-self: stretch;
+}
+
+.pro-img img {
+  width: 226px;
+  height: 226px;
+  border-radius: 159.5px;
+  border: 4.5px solid var(--Button-main-d, #5A2006);
+  background: var(--Avatar-Male-Jackson, lightgray 50% / cover no-repeat);
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  display: block;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  border-radius: 16px;
+  background: var(--Button-main-d, #5A2006);
+  border: none;
+
+  color: var(--Button-FontColor-active, #FFF);
+  text-align: center;
+
+  /* Body/Bold */
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.07px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.info-body {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.info-text {
+  flex: 1 0 0;
+  color: var(--BG-Black, #000);
+
+  /* Body Large/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 33.6px */
+  letter-spacing: 0.12px;
+}
+
+.any {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.texts {
+  align-self: stretch;
+  color: var(--Button-FontColor-disabled, #797979);
+
+  /* Body/Medium */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.14px;
+}
+
+.switches {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.form-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.form-check-label {
+  flex: 1 0 0;
+  color: var(--BG-Black, #000);
+
+  /* Body/Bold */
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  /* 22.4px */
+  letter-spacing: 0.07px;
+}
+
+input[type=checkbox] {
+  background-color: #E0E0E0;
+}
+
+input[type=checkbox]:checked {
+  background-color: #C17A46;
+}
+
+/* General buttons' styling ..................................................................... */
+
+button:hover {
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: var(--Space-16px, 16px);
+  background: var(--Button-main-h, #C17A46);
+}
+
+button:active {
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: var(--Space-16px, 16px);
+  background: var(--Button-main-p, #491302);
+}

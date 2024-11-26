@@ -1,0 +1,64 @@
+<nav class="navbar">
+  <div class="navbar-logo" routerLink="/home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="20" viewBox="0 0 36 20" fill="none">
+      <path d="M0 1.61827H4.52282V18.4232H0V1.61827Z" fill="#5A2006"/>
+      <path d="M4.52282 1.61827H0L4.52282 0.0415039V1.61827Z" fill="#5A2006"/>
+      <path d="M4.52282 18.4232H0L4.52282 20V18.4232Z" fill="#5A2006"/>
+      <path d="M10.4149 16.3071V20L11.9917 16.3071H10.4149Z" fill="#5A2006"/>
+      <path d="M6.09959 20V16.3071L4.52282 20H6.09959Z" fill="#5A2006"/>
+      <path d="M6.09959 20V16.3071H10.4149V20H6.09959Z" fill="#5A2006"/>
+      <path d="M21.8257 1.61827H26.3485V18.4232H21.8257V1.61827Z" fill="#5A2006"/>
+      <path d="M26.3485 1.61827H21.8257L26.3485 0.041504V1.61827Z" fill="#5A2006"/>
+      <path d="M26.3485 18.4232H21.8257L26.3485 20V18.4232Z" fill="#5A2006"/>
+      <path d="M27.9253 3.73445V0.0415039L26.3485 3.73445H27.9253Z" fill="#5A2006"/>
+      <path d="M27.9253 16.3071V20L26.3485 16.3071H27.9253Z" fill="#5A2006"/>
+      <path d="M27.9253 8.17428V11.8672L26.3485 8.17428H27.9253Z" fill="#5A2006"/>
+      <path d="M33.8174 3.73445V0.0415039L35.3941 3.73445H33.8174Z" fill="#5A2006"/>
+      <path d="M31.7012 8.13279H35.3941L31.7012 10V8.13279Z" fill="#5A2006"/>
+      <path d="M31.7012 11.8672H35.3941L31.7012 10V11.8672Z" fill="#5A2006"/>
+      <path d="M33.8174 16.3071V20L35.3941 16.3071H33.8174Z" fill="#5A2006"/>
+      <path d="M27.9253 11.9087V8.17428H31.7012V11.9087H27.9253Z" fill="#5A2006"/>
+      <path d="M31.7012 3.73445H35.3941V8.13279H31.7012V3.73445Z" fill="#5A2006"/>
+      <path d="M31.7012 11.8672H35.3941V16.3071H31.7012V11.8672Z" fill="#5A2006"/>
+      <path d="M27.9253 3.73445V0.0415039H33.8174V3.73445H27.9253Z" fill="#5A2006"/>
+      <path d="M27.9253 20V16.3071H33.8174V20H27.9253Z" fill="#5A2006"/>
+      <path d="M14.6475 3.48548H19.1703L14.6475 5.06224V3.48548Z" fill="#5A2006"/>
+      <path d="M19.1703 1.57676H14.6475L19.1703 0V1.57676Z" fill="#5A2006"/>
+      <path d="M14.6475 6.26556H19.1703V18.3817H14.6475V6.26556Z" fill="#5A2006"/>
+      <path d="M19.1703 6.26556H14.6475L19.1703 4.6888V6.26556Z" fill="#5A2006"/>
+      <path d="M19.1703 18.3817H14.6475L19.1703 19.9585V18.3817Z" fill="#5A2006"/>
+      <path d="M14.6475 1.57676H19.1703V3.48548H14.6475V1.57676Z" fill="#5A2006"/>
+    </svg> 
+   </div>
+
+  <div class="navbar-links" [class.active]="menuOpen">
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/search">Search</a></li>
+      <!-- <li><a href="#">New Books</a></li>
+      <li><a href="#">Most Viewed</a></li> -->
+    </ul>
+  </div>
+
+  <div class="navbar-buttons" [class.active]="menuOpen">
+    <div id="buttons" style="display: flex;" *ngIf="!isLoggedIn">
+    <button class="btn login-btn "  routerLink="/login">Login</button>
+    <button class="btn register-btn" routerLink="/signUp">Register</button>
+    </div>
+    <div id="icon" *ngIf="isLoggedIn">
+      <p>{{ userName }}</p><img src="profile/Profile Image.png" routerLink="/profile">
+      <button class="btn login-btn" (click)="logout()">Logout</button>
+    </div>
+  </div>
+  
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <!-- <svg class="notification" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+      <path d="M5.66666 15.8334C6.04874 17.271 7.39625 18.3334 9 18.3334C10.6037 18.3334 11.9512 17.271 12.3333 15.8334M1.10826 12.308C0.931054 13.4697 1.72333 14.276 2.69337 14.6779C6.41234 16.2185 11.5877 16.2185 15.3066 14.6779C16.2767 14.276 17.0689 13.4697 16.8917 12.308C16.7828 11.5941 16.2443 10.9996 15.8453 10.4191C15.3227 9.64944 15.2708 8.80985 15.2707 7.91669C15.2707 4.4649 12.4632 1.66669 9 1.66669C5.53677 1.66669 2.72927 4.4649 2.72927 7.91669C2.72919 8.80985 2.67726 9.64944 2.15467 10.4191C1.7557 10.9996 1.21717 11.5941 1.10826 12.308Z" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>  -->
+    <svg class="menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M3.33301 4.16663H16.6663" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.33301 10H16.6663" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.33301 15.8334H16.6663" stroke="#5A2006" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</nav>

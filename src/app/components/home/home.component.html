@@ -1,0 +1,234 @@
+<app-navbar></app-navbar>
+<!-- <div class="parent2">
+  <input type="text" value="Serch">
+
+
+   <button>Category</button> 
+  <select id="options" name="options">
+    <option value="option1">Catrgory</option>
+    <option value="option2">الخيار 2</option>
+    <option value="option3">الخيار 3</option>
+    <option value="option4">الخيار 4</option>
+  </select>
+  <select id="options" name="options">
+    <option value="option1">Rating</option>
+    <option value="option2">الخيار 2</option>
+    <option value="option3">الخيار 3</option>
+    <option value="option4">الخيار 4</option>
+  </select>
+
+  <button>Serch</button>
+</div> -->
+<div class="mainBox">
+  <div class="section1">
+    <div>
+      <h1>
+        Unlock a World of Endless Possibilities
+      </h1>
+    </div>
+  </div>
+  <div class="HeaderSection2">
+    <h4>New Arrivals</h4>
+  </div>
+  
+  <div class="ParentSection2">
+  
+  
+    <div class="section2_1">
+      <div class="div1_section2_1">
+        <h4>
+          Harry Potter and the Philosopher's Stone
+        </h4>
+        <p>Harry Potter and the Philosopher's Stone is a fantasy novel written by the British author J. K. Rowling. It is
+          the first novel in the Harry Potter series and was Rowling's debut novel. It follows Harry Potter, a young
+          wiz...</p>
+      </div>
+    </div>
+    <div class="section2_2">
+  
+      <div class="div1" *ngFor="let x of booklst| slice:1:4">
+        <div class="img">
+          <img src = {{x.coverImageUrl}}>
+        </div>
+        <div class="box">
+          <h5>{{x.bookName}}</h5>
+          <p>{{x.bookAuthor}}</p>
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <button (click)="sendPageId(this.x)" routerLink="/book">view</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="header_section_3">
+    <h4>
+      Recommendations
+    </h4>
+    <a href="#" (click)="toggleShowMore($event)">View More</a>
+  </div>
+  <div class="section_3">
+    <div class="section_3_body" *ngFor="let x of booklst| slice:7:11">
+      <div class="section_3_body_img">
+        <img src = {{x.coverImageUrl}}>
+      </div>
+      <div class="section_3_body_information">
+        <h4>{{x.bookName}}</h4>
+        <p>{{x.bookAuthor}}</p>
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+      </div>
+    </div>
+
+     <!-- كتب إضافية -->
+   <ng-container *ngIf="showMore">
+    <div class="section_3_body"  *ngFor="let x of booklst| slice:1:5">
+       <div class="section_3_body_img">
+          <img src = {{x.coverImageUrl}}>
+       </div>
+       <div class="section_3_body_information">
+          <h4>{{x.bookName}}</h4> 
+          <p>{{x.bookAuthor}}</p>
+          <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+       </div>
+    </div>
+ </ng-container>
+  </div>
+  <div class="header_section_3">
+    <h4>
+      Trending Books
+    </h4>
+    <a href="#" (click)="toggleShowMoree($event)">View More</a>
+  </div>
+  <div class="section_3">
+    <div class="section_3_body" *ngFor="let x of booklst| slice:11:15">
+      <div class="section_3_body_img">
+        <img src = {{x.coverImageUrl}}>
+      </div>
+      <div class="section_3_body_information">
+        <h4>{{x.bookName}}</h4>
+        <p>{{x.bookAuthor}}</p>
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+      </div>
+    </div>
+    <ng-container *ngIf="showMoree">
+      <div class="section_3_body"  *ngFor="let x of booklst| slice:8:12">
+         <div class="section_3_body_img">
+            <img src = {{x.coverImageUrl}}>
+         </div>
+         <div class="section_3_body_information">
+            <h4>{{x.bookName}}</h4> 
+            <p>{{x.bookAuthor}}</p>
+            <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+         </div>
+      </div>
+   </ng-container>
+  </div>
+  <div class="header_section_3">
+    <h4>
+      Classic Books
+    </h4>
+    <a href="#" (click)="toggleShowMoreee($event)">View More</a>
+  </div>
+  <div class="section_3">
+    <div class="section_3_body" *ngFor="let x of booklst| slice:3:7">
+      <div class="section_3_body_img">
+        <img src = {{x.coverImageUrl}}>
+      </div>
+      <div class="section_3_body_information">
+        <h4>{{x.bookName}}</h4>
+        <p>{{x.bookAuthor}}</p>
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+      </div>
+    </div>
+    <ng-container *ngIf="showMoreee">
+      <div class="section_3_body"  *ngFor="let x of booklst| slice:11:15">
+         <div class="section_3_body_img">
+            <img src = {{x.coverImageUrl}}>
+         </div>
+         <div class="section_3_body_information">
+            <h4>{{x.bookName}}</h4> 
+            <p>{{x.bookAuthor}}</p>
+            <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+         </div>
+      </div>
+   </ng-container>
+  </div>
+  <div class="header_section_3">
+    <h4>
+      Romance
+    </h4>
+    <a href="#" (click)="toggleShowMoreeee($event)">View More</a>
+  </div>
+  <div class="section_3">
+    <div class="section_3_body" *ngFor="let x of booklst| slice:8:12">
+      <div class="section_3_body_img">
+        <img src = {{x.coverImageUrl}}>
+      </div>
+      <div class="section_3_body_information">
+        <h4>{{x.bookName}}</h4>
+        <p>{{x.bookAuthor}}</p>
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <img src="/home/star-empty.svg">
+        <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+      </div>
+    </div>
+    <ng-container *ngIf="showMoreeee">
+      <div class="section_3_body"  *ngFor="let x of booklst| slice:3:7">
+         <div class="section_3_body_img">
+            <img src = {{x.coverImageUrl}}>
+         </div>
+         <div class="section_3_body_information">
+            <h4>{{x.bookName}}</h4> 
+            <p>{{x.bookAuthor}}</p>
+            <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <img src="/home/star-empty.svg">
+          <button (click)="sendPageId(this.x)" routerLink="/book">avilable</button>
+         </div>
+      </div>
+   </ng-container>
+  </div>
+  
+  
+</div>
+
+<app-footer></app-footer>
